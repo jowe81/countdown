@@ -20,6 +20,14 @@
   align-self: center;
 }
 
+.linkBtn {
+  height: 50px;
+  margin:10px;
+}
+
+.linkBtn  .badge {
+  font-size: 100%;
+}
 
 body {
   background-image: url("../public/background.jpg");

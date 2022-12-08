@@ -27,7 +27,7 @@ export default function Countdown(props) {
   const days = Math.floor(hours / 24);
   const weeks = Math.floor(days / 7);
   
-  const dDays = (days - weeks * 7);
+  const dDays = (days);
   const dHours = (hours - days * 24);
   const dMinutes = (minutes - hours * 60);
   const dSeconds = (seconds - minutes * 60);
@@ -39,12 +39,16 @@ export default function Countdown(props) {
 
   return (
     <div className="aligner">
-      <div className="aligner-item">
-        <Badge bg="primary" style={{minWidth:90 + 'px'}}>{weeks} {getWord(weeks, "week")}</Badge>
+      <div>
         <Badge bg="primary" style={{minWidth:90 + 'px'}}>{dDays} {getWord(dDays, "day")}</Badge>
         <Badge bg="primary" style={{minWidth:90 + 'px'}}>{dHours} {getWord(dHours, "hour")}</Badge>
         <Badge bg="primary" style={{minWidth:90 + 'px'}}>{dMinutes} {getWord(dMinutes, "minute")}</Badge>
         <Badge bg="primary" style={{minWidth:90 + 'px'}}>{dSeconds} {getWord(dSeconds, "second")}</Badge>
+        <div className="linkBtn">
+          <a href="https://www.weddingwire.ca/web/jessica-bjorkman-and-johannes-weber">
+            <Badge bg="secondary" style={{minWidth:110 + 'px'}}>Learn more...</Badge>
+          </a>
+        </div>
       </div>
     </div>
   );
